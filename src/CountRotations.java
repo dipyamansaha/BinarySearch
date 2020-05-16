@@ -9,16 +9,16 @@ public class CountRotations
 
         while(low <= high)
         {
-            if(Arr[low] <= Arr[high])     // Case-1: The segment is sorted. Found the index of the minimum element!
-                return low;
+            if(Arr[low] <= Arr[high])     // Case-1: The segment is sorted. Found the index
+                return low;               // of the minimum element!
 
             int mid = (low + high)/2;
 
             int next = (mid + 1)%Arr.length;
             int prev = (mid - 1 + Arr.length)%Arr.length;
 
-            if((Arr[mid] <= Arr[next]) && (Arr[mid] <= Arr[prev]))     // Case-2: Found the pivot element! That is the minimum element.
-                return mid;
+            if((Arr[mid] <= Arr[next]) && (Arr[mid] <= Arr[prev]))     // Case-2: Found the pivot element! That
+                return mid;                                            // is the minimum element.
 
             if(Arr[mid] <= Arr[high])     // Case-3: The right half is sorted. Searching in the left half.
                 high = (mid - 1);

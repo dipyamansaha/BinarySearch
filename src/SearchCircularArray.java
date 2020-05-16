@@ -19,8 +19,8 @@ public class SearchCircularArray
 
             if(Arr[mid] <= Arr[high])       // Case-2: The right half is sorted.
             {
-                if((num > Arr[mid]) && (num <= Arr[high]))      // Case 2A: Go searching in the right sorted half.
-                    low = (mid + 1);
+                if((num > Arr[mid]) && (num <= Arr[high]))      // Case 2A: Go searching in the right
+                    low = (mid + 1);                            // sorted half.
                 else        // Case 2B: Go searching in the left half.
                     high = (mid - 1);
             }
